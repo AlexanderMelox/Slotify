@@ -1,1 +1,1 @@
-# Slotify # Slotify
+# Slotify
