@@ -19,6 +19,7 @@
         
             if (strlen($un) > 25 || strlen($un) < 5) {
                 array_push($this->errorArray, "Your username must be between 5 and 25 characters");
+                return;
             }
 
             // TODO: check if the username exists
@@ -26,15 +27,37 @@
         }
         
         private function validateFirstName($fn) {
-            
+
+            if (strlen($fn) > 25 || strlen($fn) < 5) {
+                array_push($this->errorArray, "Your first name must be between 2 and 25 characters");
+                return;
+            }
+
         }
         
         private function validateLastName($ln) {
-            
+
+            if (strlen($ln) > 25 || strlen($ln) < 5) {
+                array_push($this->errorArray, "Your last name must be between 2 and 25 characters");
+                return;
+            }
+
         }
         
         private function validateEmails($em, $em2) {
             
+            if ($em != $em2) {
+                array_push($this->errorArray, "Your emails don't match");
+                return;
+            }
+
+            if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
+                array_push($this->errorArray, "Email is invalid");
+                return;
+            }
+
+            // TODO: Check that email hasnt already been used
+
         }
         
         private function validatePasswords($pw, $pw2) {
