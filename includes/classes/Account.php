@@ -16,7 +16,7 @@
 
             if (empty($this->errorArray)) {
                 // Insert into db
-                return true;
+                return false;
             } else {
                 return false;
             }
