@@ -1,7 +1,7 @@
 <?php 
     class Account {
 
-        private $errorArray;
+        public $errorArray;
 
         public function __contruct() {
             $this->errorArray = array();
@@ -10,7 +10,7 @@
         public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
             $this->validateUsername($un);
             $this->validateFirstName($fn);
-            $this->validateLastName($ls);
+            $this->validateLastName($ln);
             $this->validateEmails($em, $em2);
             $this->validatePasswords($pw, $pw2);
 
