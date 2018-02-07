@@ -3,8 +3,8 @@
 
         public $errorArray;
 
-        public function __contruct() {
-            $this->errorArray = array();
+        public function __construct() {
+            $this->errorArray = [];
         }
 
         public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
