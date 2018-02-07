@@ -4,7 +4,7 @@
         public $errorArray;
 
         public function __construct() {
-            $this->errorArray = array();
+            $this->errorArray = [];
         }
 
         public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
